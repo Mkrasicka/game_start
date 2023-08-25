@@ -26,13 +26,10 @@ const handSelection = function(e) {
   this.style.boxShadow = "0 0 0 4px yellow";
 }
 
-
 hands.forEach((hand) => {
   hand.style.boxShadow = "";
   hand.addEventListener("click", handSelection);
 });
-
-
 
 function checkResult(playerHand, aiHand) {
   if (playerHand === aiHand) {
@@ -43,7 +40,6 @@ function checkResult(playerHand, aiHand) {
     return "Loss"
   }
 };
-
 
 function publishResult(player, ai, result) {
   const h2 = document.querySelector('span[data-summary ="who-win"]');
